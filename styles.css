@@ -1,36 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e4e5e6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh;
+}
+
+.header {
+    padding: 20px;
+    background-color: #111213;
+    color: #f4f4f4;
+    border-bottom: 3px solid #2a628f;
+}
+
+.main {
+    padding: 20px;
+    background-color: #eeeeee;
+    border-bottom: 3px solid #d4d4d4;
+    height: 80%;
+}
+
+.footer {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
 .calculator {
-    max-width: 300px;
+    max-width: 20%;
+    height: 80%;
     margin: 0 auto;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;
+    background-color: #130c0c;
 }
 
 #display {
-    width: calc(100% - 10px);
-    margin-bottom: 10px;
-    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 1px;
     font-size: 20px;
+    height: 15%;
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:90%;
+    width: 100%;
 }
 
-button {
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    background-color: #f0f0f0;
+.buttons .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    padding: 1px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 1px;
+    font-size: 20px;
+    border:#ccc;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
 
-button:hover {
+.buttons button.operator {
+    background-color: #569b07; 
+}
+
+.buttons button.digit {
+    background-color: #041c49; 
+}
+
+.buttons button.decimal {
+    background-color: #20b2aa;
+}
+
+.buttons button#clear {
+    background-color: red; 
+}
+
+.buttons button:hover {
     background-color: #ddd;
 }
 
-button:active {
+.buttons button:active {
     background-color: #bbb;
 }

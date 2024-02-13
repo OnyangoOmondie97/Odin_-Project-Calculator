@@ -4,31 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" readonly>
-        <div class="buttons">
-            <button class="digit" data-value="7">7</button>
-            <button class="digit" data-value="8">8</button>
-            <button class="digit" data-value="9">9</button>
-            <button class="operator" data-value="/">/</button>
-            <button class="digit" data-value="4">4</button>
-            <button class="digit" data-value="5">5</button>
-            <button class="digit" data-value="6">6</button>
-            <button class="operator" data-value="*">*</button>
-            <button class="digit" data-value="1">1</button>
-            <button class="digit" data-value="2">2</button>
-            <button class="digit" data-value="3">3</button>
-            <button class="operator" data-value="-">-</button>
-            <button class="digit" data-value="0">0</button>
-            <button class="decimal" data-value=".">.</button>
-            <button id="clear">C</button>
-            <button class="operator" data-value="+">+</button>
-            <button id="equals">=</button>
+    <header class="header">
+        <h1 class="title">Calculator</h1>
+    </header>
+
+    <main class="main">
+        <div class="container calculator">
+            <input type="text" id="display" readonly>
+
+            <div class="buttons">
+                <!-- Row 1 -->
+                <div id="row1" class="row">
+                    <div class="col-3"><button class="operator btn btn-danger" data-value="+">+</button></div>
+                    <div class="col-3"><button class="operator btn btn-danger" data-value="-">-</button></div>
+                    <div class="col-3"><button class="operator btn btn-danger" data-value="*">X</button></div>
+                    <div class="col-3"><button class="operator btn btn-danger" data-value="/">÷</button></div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div id="row2" class="row">
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="7">7</button></div>
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="8">8</button></div>
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="9">9</button></div>
+                </div>
+                
+                <!-- Row 3 -->
+                <div id="row3" class="row">
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="4">4</button></div>
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="5">5</button></div>
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="6">6</button></div>
+                </div>
+                
+                <!-- Row 4 -->
+                <div id="row4" class="row">
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="1">1</button></div>
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="2">2</button></div>
+                    <div class="col-4"><button class="digit btn btn-primary" data-value="3">3</button></div>
+                </div>
+                
+                <!-- Row 5 -->
+                <div id="row5" class="row">
+                    <div class="col-6"><button id="equals" class="w-100 btn btn-primary">=</button></div>
+                    <div class="col-3"><button class="decimal btn btn-primary" data-value=".">.</button></div>
+                    <div class="col-3"><button id="clear" class="w-100 btn btn-danger">C</button></div>
+                </div>
+                
+            </div>
         </div>
-    </div>
+    </main>
+  
+    <footer>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-section-header">
+                <h2>Let's connect...</h2>
+            </div>
+            <div class="contact-links">
+                <a id="profile-link" href="https://github.com/OnyangoOmondie97" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+                <a id="profile-link" href="https://www.linkedin.com/in/keith-omondi/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </section>
+        <section id="copyright" class="copyright-section">
+            <div class="copyright">
+                <p>&copy; 2024 Keith's Portfolio. All rights reserved.</p>
+            </div>  
+        </section>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
